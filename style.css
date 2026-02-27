@@ -1,0 +1,441 @@
+:root {
+  --primary: #000000;
+  --bg: #1f1717;
+}
+/*menu atas*/
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*warna text bawah nikmati kemurniannya*/
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #e0caca;
+}
+
+/* warna garis batas menu atas*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background-color: rgb(1, 1, 1 0.8);
+  border-bottom: 1px solid #eef1f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/*logo teks madu murni pojok kiri atas*/
+.navbar .navbar-logo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #b91818;
+  font-style: italic;
+}
+
+/*warna teks ym farm pojok kiri atas*/
+.navbar .navbar-logo span {
+  color: #fcfcfc;
+}
+
+/* warna & spasi teks menu atas sebelum diklik*/
+.navbar .navbar-nav a {
+  color: #ffffff;
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 19px;
+}
+
+/*warna teks menu atas ke bawah sesudah diklik*/
+.navbar .navbar-nav a:hover {
+  color: #0365b6;
+}
+
+/* garis bawah menu kanan atas ke bawah sesudah diklik*/
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #ca5e06;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+/*kecepatan garis bawah*/
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/*warna search dan keranjang*/
+.navbar .navbar-extra a {
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+
+/*warna keranjang dan search sesudah diklik*/
+.navbar .navbar-extra a:hover {
+  color: #09559c;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section atau gambar background*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bgg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero ::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/*Teks Nikmati Kemurniannya*/
+.hero .content {
+  padding:
+    1,
+    4rem 7%;
+  max-width: 60rem;
+}
+
+/*warna teks nikmati*/
+.hero .content h1 {
+  font-size: 5.5em;
+  color: #0e0b0b;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+  margin-left: 15px;
+}
+
+/*warna teks kemurniannya*/
+.hero .content h1 span {
+  color: #0931b3;
+}
+
+/*spasi teks dibawah nikmati kemurniannya*/
+.hero .content p {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  line-height: 1.4;
+  margin-left: 15px;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/*beli sekrang*/
+.hero .content .cta {
+  margin-left: 1rem;
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 0.5px 0.5px 2px rgba(1, 1, 3, 0.5);
+}
+
+/*About Section atau Tentang Kami*/
+/*letak gambar tentang*/
+.about,
+.menu,
+.contact {
+  padding: 8rem 8% 0.2rem;
+  border-radius: 1.5rem;
+}
+
+/*teks tentang kami*/
+.about h2,
+.menu h2,
+.contact h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #00ffff;
+}
+
+.about h2 span,
+.menu h2 span,
+.contact h2 span {
+  color: #abafdb;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+/*ukuran gambar about*/
+.about .row .about-img img {
+  width: 75%;
+}
+
+/*Lebar letak teks penjelasan*/
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+  color: #abafdb;
+}
+/*ukur knp?*/
+.about .row .content h3 {
+  font-size: 1.9rem;
+  margin-top: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/*Menu Section*/
+
+.menu h2,
+.contact h2 {
+  margin-bottom: 1rem;
+  color: #ebe2e2;
+}
+
+/*teks dibawah menu kami*/
+.menu p,
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  color: #fcfcfc;
+  font-weight: 100;
+  line-height: 1.9;
+  font-size: 1.3rem;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+/*teks harga*/
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+/*gambar madu menunya*/
+.menu .row .menu-card img {
+  border-radius: 20%;
+  width: 80%;
+}
+
+/*jarak teks idr dan harga*/
+.menu .row .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+  color: #ffffff;
+}
+
+/*Contact Section*/
+
+.contact .row {
+  display: flex;
+  margin-top: 3rem;
+  background-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  color: #050505;
+  border-color: var(--primary);
+  cursor: pointer;
+}
+
+/*Footer*/
+footer {
+  background-color: #062222;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #f9feff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: #ce9427;
+}
+
+footer .links {
+  margin-bottom: 1.4;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: #c2b717;
+  font-weight: 700;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 748px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+.navbar .navbar-nav a::after {
+  transform-origin: 0;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.2);
+}
+
+/*mindah text jadi ke bawah saat dikecilin*/
+.about .row {
+  flex-wrap: wrap;
+}
+
+/*posisi dan ukuran gambar tentang kami*/
+.about .row .about-img img {
+  height: 36rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*teks sejajar sama gambarnya*/
+.about .row .content {
+  padding: 10;
+}
+/*ukuran teks knp memilih*/
+.about .row .content h3 {
+  margin-top: 1rem;
+  font-size: 1.9rem;
+}
+
+.about .row .content p {
+  font-size: 1.6rem;
+}
+
+.menu p {
+  font-size: 1.3rem;
+}
+
+.contact .row {
+  flex-wrap: wrap;
+}
+
+.contact .row .map {
+  height: 30rem;
+}
+
+.contact .row form {
+  padding-top: 0;
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
